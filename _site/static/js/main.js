@@ -132,105 +132,9 @@ $(function() {
   
   
   
-  // ACISP 2026
+  // Monterey Data Conference 2025
   
-  var rawDeadlines = ["2025-11-06 23:59","2026-02-19 23:59"] || [];
-  if (rawDeadlines.constructor !== Array) {
-    rawDeadlines = [rawDeadlines];
-  }
-  var parsedDeadlines = [];
-  while (rawDeadlines.length > 0) {
-    var rawDeadline = rawDeadlines.pop();
-    // deal with year template in deadline
-    year = 2026;
-    rawDeadline = rawDeadline.replace('%y', year).replace('%Y', year - 1);
-    // adjust date according to deadline timezone
-    
-    var deadline = moment.tz(rawDeadline, "Etc/GMT+12"); // Anywhere on Earth
-    
-
-    // post-process date
-    if (deadline.minutes() === 0) {
-      deadline.subtract(1, 'seconds');
-    }
-    if (deadline.minutes() === 59) {
-      deadline.seconds(59);
-    }
-    parsedDeadlines.push(deadline);
-  }
-  // due to pop before; we need to reverse such that the i index later matches
-  // the right parsed deadline
-  parsedDeadlines.reverse();
-
-  
-  
-  //
-  
-  
-  var deadlineId = 0;
-  if (deadlineId < parsedDeadlines.length) {
-    var confDeadline = parsedDeadlines[deadlineId];
-
-    // render countdown timer
-    if (confDeadline) {
-      function make_update_countdown_fn(confDeadline) {
-        return function(event) {
-          diff = moment() - confDeadline
-          if (diff <= 0) {
-             $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-          } else {
-            $(this).html(confDeadline.fromNow());
-          }
-        }
-      }
-      $('#acisp2026-pract-applied-cnf-coreb-exp-0 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
-      // check if date has passed, add 'past' class to it
-      if (moment() - confDeadline > 0) {
-        $('#acisp2026-pract-applied-cnf-coreb-exp-0').addClass('past');
-      }
-      $('#acisp2026-pract-applied-cnf-coreb-exp-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-      deadlineByConf["acisp2026-pract-applied-cnf-coreb-exp-0"] = confDeadline;
-    }
-  } else {
-    // TODO: hide the conf_id ?
-  }
-  
-  //
-  
-  
-  var deadlineId = 1;
-  if (deadlineId < parsedDeadlines.length) {
-    var confDeadline = parsedDeadlines[deadlineId];
-
-    // render countdown timer
-    if (confDeadline) {
-      function make_update_countdown_fn(confDeadline) {
-        return function(event) {
-          diff = moment() - confDeadline
-          if (diff <= 0) {
-             $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-          } else {
-            $(this).html(confDeadline.fromNow());
-          }
-        }
-      }
-      $('#acisp2026-pract-applied-cnf-coreb-exp-1 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
-      // check if date has passed, add 'past' class to it
-      if (moment() - confDeadline > 0) {
-        $('#acisp2026-pract-applied-cnf-coreb-exp-1').addClass('past');
-      }
-      $('#acisp2026-pract-applied-cnf-coreb-exp-1 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-      deadlineByConf["acisp2026-pract-applied-cnf-coreb-exp-1"] = confDeadline;
-    }
-  } else {
-    // TODO: hide the conf_id ?
-  }
-  
-  
-  
-  // AfricaCrypt 2025
-  
-  var rawDeadlines = ["2025-03-10 23:59"] || [];
+  var rawDeadlines = ["2025-08-01 23:59"] || [];
   if (rawDeadlines.constructor !== Array) {
     rawDeadlines = [rawDeadlines];
   }
@@ -279,143 +183,13 @@ $(function() {
           }
         }
       }
-      $('#africacrypt2025-theory-pract-cnf-coreo-0 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
+      $('#monterey-data-conference2025-pract-wk-0 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
       // check if date has passed, add 'past' class to it
       if (moment() - confDeadline > 0) {
-        $('#africacrypt2025-theory-pract-cnf-coreo-0').addClass('past');
+        $('#monterey-data-conference2025-pract-wk-0').addClass('past');
       }
-      $('#africacrypt2025-theory-pract-cnf-coreo-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-      deadlineByConf["africacrypt2025-theory-pract-cnf-coreo-0"] = confDeadline;
-    }
-  } else {
-    // TODO: hide the conf_id ?
-  }
-  
-  
-  
-  // ACM CCSW 2025
-  
-  var rawDeadlines = ["2025-07-08 23:59"] || [];
-  if (rawDeadlines.constructor !== Array) {
-    rawDeadlines = [rawDeadlines];
-  }
-  var parsedDeadlines = [];
-  while (rawDeadlines.length > 0) {
-    var rawDeadline = rawDeadlines.pop();
-    // deal with year template in deadline
-    year = 2025;
-    rawDeadline = rawDeadline.replace('%y', year).replace('%Y', year - 1);
-    // adjust date according to deadline timezone
-    
-    var deadline = moment.tz(rawDeadline, "Etc/GMT+12"); // Anywhere on Earth
-    
-
-    // post-process date
-    if (deadline.minutes() === 0) {
-      deadline.subtract(1, 'seconds');
-    }
-    if (deadline.minutes() === 59) {
-      deadline.seconds(59);
-    }
-    parsedDeadlines.push(deadline);
-  }
-  // due to pop before; we need to reverse such that the i index later matches
-  // the right parsed deadline
-  parsedDeadlines.reverse();
-
-  
-  
-  //
-  
-  
-  var deadlineId = 0;
-  if (deadlineId < parsedDeadlines.length) {
-    var confDeadline = parsedDeadlines[deadlineId];
-
-    // render countdown timer
-    if (confDeadline) {
-      function make_update_countdown_fn(confDeadline) {
-        return function(event) {
-          diff = moment() - confDeadline
-          if (diff <= 0) {
-             $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-          } else {
-            $(this).html(confDeadline.fromNow());
-          }
-        }
-      }
-      $('#acm-ccsw2025-pract-wk-0 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
-      // check if date has passed, add 'past' class to it
-      if (moment() - confDeadline > 0) {
-        $('#acm-ccsw2025-pract-wk-0').addClass('past');
-      }
-      $('#acm-ccsw2025-pract-wk-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-      deadlineByConf["acm-ccsw2025-pract-wk-0"] = confDeadline;
-    }
-  } else {
-    // TODO: hide the conf_id ?
-  }
-  
-  
-  
-  // ACM ASIACCS 2026
-  
-  var rawDeadlines = ["2026-03-16 23:59"] || [];
-  if (rawDeadlines.constructor !== Array) {
-    rawDeadlines = [rawDeadlines];
-  }
-  var parsedDeadlines = [];
-  while (rawDeadlines.length > 0) {
-    var rawDeadline = rawDeadlines.pop();
-    // deal with year template in deadline
-    year = 2026;
-    rawDeadline = rawDeadline.replace('%y', year).replace('%Y', year - 1);
-    // adjust date according to deadline timezone
-    
-    var deadline = moment.tz(rawDeadline, "Etc/GMT+12"); // Anywhere on Earth
-    
-
-    // post-process date
-    if (deadline.minutes() === 0) {
-      deadline.subtract(1, 'seconds');
-    }
-    if (deadline.minutes() === 59) {
-      deadline.seconds(59);
-    }
-    parsedDeadlines.push(deadline);
-  }
-  // due to pop before; we need to reverse such that the i index later matches
-  // the right parsed deadline
-  parsedDeadlines.reverse();
-
-  
-  
-  //
-  
-  
-  var deadlineId = 0;
-  if (deadlineId < parsedDeadlines.length) {
-    var confDeadline = parsedDeadlines[deadlineId];
-
-    // render countdown timer
-    if (confDeadline) {
-      function make_update_countdown_fn(confDeadline) {
-        return function(event) {
-          diff = moment() - confDeadline
-          if (diff <= 0) {
-             $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-          } else {
-            $(this).html(confDeadline.fromNow());
-          }
-        }
-      }
-      $('#acm-asiaccs2026-pract-ps-expcfp-0 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
-      // check if date has passed, add 'past' class to it
-      if (moment() - confDeadline > 0) {
-        $('#acm-asiaccs2026-pract-ps-expcfp-0').addClass('past');
-      }
-      $('#acm-asiaccs2026-pract-ps-expcfp-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-      deadlineByConf["acm-asiaccs2026-pract-ps-expcfp-0"] = confDeadline;
+      $('#monterey-data-conference2025-pract-wk-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
+      deadlineByConf["monterey-data-conference2025-pract-wk-0"] = confDeadline;
     }
   } else {
     // TODO: hide the conf_id ?
@@ -481,136 +255,6 @@ $(function() {
       }
       $('#aaai2025-pract-cnf-ppml-coreas-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
       deadlineByConf["aaai2025-pract-cnf-ppml-coreas-0"] = confDeadline;
-    }
-  } else {
-    // TODO: hide the conf_id ?
-  }
-  
-  
-  
-  // AsianHOST 2025
-  
-  var rawDeadlines = ["2025-07-28 14:59"] || [];
-  if (rawDeadlines.constructor !== Array) {
-    rawDeadlines = [rawDeadlines];
-  }
-  var parsedDeadlines = [];
-  while (rawDeadlines.length > 0) {
-    var rawDeadline = rawDeadlines.pop();
-    // deal with year template in deadline
-    year = 2025;
-    rawDeadline = rawDeadline.replace('%y', year).replace('%Y', year - 1);
-    // adjust date according to deadline timezone
-    
-    var deadline = moment.tz(rawDeadline, "Etc/GMT+12"); // Anywhere on Earth
-    
-
-    // post-process date
-    if (deadline.minutes() === 0) {
-      deadline.subtract(1, 'seconds');
-    }
-    if (deadline.minutes() === 59) {
-      deadline.seconds(59);
-    }
-    parsedDeadlines.push(deadline);
-  }
-  // due to pop before; we need to reverse such that the i index later matches
-  // the right parsed deadline
-  parsedDeadlines.reverse();
-
-  
-  
-  //
-  
-  
-  var deadlineId = 0;
-  if (deadlineId < parsedDeadlines.length) {
-    var confDeadline = parsedDeadlines[deadlineId];
-
-    // render countdown timer
-    if (confDeadline) {
-      function make_update_countdown_fn(confDeadline) {
-        return function(event) {
-          diff = moment() - confDeadline
-          if (diff <= 0) {
-             $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-          } else {
-            $(this).html(confDeadline.fromNow());
-          }
-        }
-      }
-      $('#asianhost2025-hw-applied-cnf-coreo-0 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
-      // check if date has passed, add 'past' class to it
-      if (moment() - confDeadline > 0) {
-        $('#asianhost2025-hw-applied-cnf-coreo-0').addClass('past');
-      }
-      $('#asianhost2025-hw-applied-cnf-coreo-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-      deadlineByConf["asianhost2025-hw-applied-cnf-coreo-0"] = confDeadline;
-    }
-  } else {
-    // TODO: hide the conf_id ?
-  }
-  
-  
-  
-  // Cybersecurity Artifacts Competition and Impact Award 2025
-  
-  var rawDeadlines = ["2025-09-17 23:59"] || [];
-  if (rawDeadlines.constructor !== Array) {
-    rawDeadlines = [rawDeadlines];
-  }
-  var parsedDeadlines = [];
-  while (rawDeadlines.length > 0) {
-    var rawDeadline = rawDeadlines.pop();
-    // deal with year template in deadline
-    year = 2025;
-    rawDeadline = rawDeadline.replace('%y', year).replace('%Y', year - 1);
-    // adjust date according to deadline timezone
-    
-    var deadline = moment.tz(rawDeadline, "Etc/GMT+12"); // Anywhere on Earth
-    
-
-    // post-process date
-    if (deadline.minutes() === 0) {
-      deadline.subtract(1, 'seconds');
-    }
-    if (deadline.minutes() === 59) {
-      deadline.seconds(59);
-    }
-    parsedDeadlines.push(deadline);
-  }
-  // due to pop before; we need to reverse such that the i index later matches
-  // the right parsed deadline
-  parsedDeadlines.reverse();
-
-  
-  
-  //
-  
-  
-  var deadlineId = 0;
-  if (deadlineId < parsedDeadlines.length) {
-    var confDeadline = parsedDeadlines[deadlineId];
-
-    // render countdown timer
-    if (confDeadline) {
-      function make_update_countdown_fn(confDeadline) {
-        return function(event) {
-          diff = moment() - confDeadline
-          if (diff <= 0) {
-             $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-          } else {
-            $(this).html(confDeadline.fromNow());
-          }
-        }
-      }
-      $('#cybersecurity-artifacts-competition-and-impact-award2025-misc-0 .timer').countdown(confDeadline.toDate(), make_update_countdown_fn(confDeadline));
-      // check if date has passed, add 'past' class to it
-      if (moment() - confDeadline > 0) {
-        $('#cybersecurity-artifacts-competition-and-impact-award2025-misc-0').addClass('past');
-      }
-      $('#cybersecurity-artifacts-competition-and-impact-award2025-misc-0 .deadline-time').html(confDeadline.local().format('D MMM YYYY, h:mm:ss a'));
-      deadlineByConf["cybersecurity-artifacts-competition-and-impact-award2025-misc-0"] = confDeadline;
     }
   } else {
     // TODO: hide the conf_id ?
@@ -796,7 +440,7 @@ $(function() {
   processFilters(filter3);
 
   // Retrieve stored preferences
-  var tags = store.get('gzquse.github.io');
+  var tags = store.get('https://qcddl.ziqguo.com');
   if (tags === undefined) {
     tags = []; // Default to all unchecked
   }
@@ -810,7 +454,7 @@ $(function() {
   }
 
   // Save updated selection to local storage
-  store.set('gzquse.github.io', tags);
+  store.set('https://qcddl.ziqguo.com', tags);
 
    
    

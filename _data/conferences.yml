@@ -21,58 +21,23 @@
   comment: Notification - November 24.
   tags: [PRACT, CNF, SOK, COREA]
 
-
 # CORE B
-
-- name: ACISP
-  description: Australasian Conference on Information Security and Privacy
-  year: 2026
-  link: https://uow-ic2.github.io/acisp2025/
-  deadline: 
-    - "2025-11-06 23:59"
-    - "2026-02-19 23:59"
-  date: July 14-16
-  place: Wollongong, Australia
-  comment: Notification - January 22, April 08.
-  tags: [PRACT, APPLIED, CNF, COREB, EXP]
   
 # CORE Others
 
-- name: AfricaCrypt
-  description: International Conference on Cryptology
-  year: 2025
-  link: https://africacrypt2025.sciencesconf.org
-  deadline: ["2025-03-10 23:59"]
-  date: July 21-23
-  place: Rabat, Morocco
-  comment: Notification - May 01.
-  tags: [THEORY, PRACT, CNF, COREO]
-
-
 # Workshops
 
-- name: ACM CCSW
-  description: The ACM Cloud Computing Security Workshop
+- name: Monterey Data Conference
+  description: Monterey Data Conference 2025
   year: 2025
-  link: https://ccsw.io
-  deadline: ["2025-07-08 23:59"]
-  date: October 17
-  place: Taipei, Taiwan
-  comment: Notification - August 12. Has proceedings.
-  conference: ACM CCS.
+  link: https://www.montereydataconference.org/
+  deadline: ["2025-08-01 23:59"]
+  date: Aug 18-21
+  place: Monterey, CA, USA
+  comment: Fun fact - they offer food in aquarium
   tags: [PRACT, WK]
   
 # Posters
-
-- name: ACM ASIACCS
-  description: ACM Asia Conference on Computer and Communications Security
-  year: 2026
-  link: https://asiaccs2026.cse.iitkgp.ac.in/
-  deadline: ["2026-03-16 23:59"]
-  date: June 01-06
-  place: Bangalore, India
-  comment: Notification - March 26. Has proceedings.
-  tags: [PRACT, PS, EXPCFP]
   
 # Machine Learning and Data Science
 
@@ -87,29 +52,8 @@
   comment: Camera Ready Deadline Sep 2nd
   tags: [PRACT, CNF, PPML, COREAS]
 
-# Hardware
-
-- name: AsianHOST
-  description: Asian Hardware Oriented Security and Trust Symposium
-  year: 2025
-  link: http://asianhost.org/2025/
-  deadline: ["2025-07-28 14:59"]
-  date: December 19-21
-  place: Nanjing, China
-  comment: Notification - September 11.
-  tags: [HW, APPLIED, CNF, COREO]
   
 # Miscellaneous
-
-- name: Cybersecurity Artifacts Competition and Impact Award
-  description: ACSAC
-  year: 2025
-  link: https://www.acsac.org/2025/submissions/artifacts_competition/
-  deadline: ["2025-09-17 23:59"]
-  date: December 08-12
-  place: Honululu, Hawaii
-  comment: Cybersecurity artifacts published in all peer-reviewed venues. Notification - October 30.
-  tags: [MISC]
   
 # Journals
 

@@ -351,3 +351,39 @@ footer {
 .calendar img {
   height: 20px;
 }
+
+.conf {
+  transition: background-color 0.3s ease;
+  border-radius: 15px;             /* Rounded corners */
+  padding: 20px;                   /* Padding inside the blocks */
+  margin-bottom: 20px;             /* Space between blocks */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: none;                    /* Remove border */
+}
+
+.conf-container {
+  padding: 0;                      /* Remove padding from the container */
+}
+
+.conf hr {
+  border: none;                    /* Remove the default border */
+  margin: 0;                       /* Remove margin to eliminate space */
+}
+
+.conf:nth-child(odd) {
+  background-color: #f0f8ff; /* Alice Blue */
+}
+
+.conf:nth-child(even) {
+  background-color: #e6f7ff; /* Light Cyan */
+}
+
+.conf.past {
+  background-color: #ffe6e6; /* Light Coral for past deadlines */
+}
+
+.conf:hover {
+  background-color: #d1e7dd; /* Light Green on hover */
+  transform: scale(1.02);     /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}

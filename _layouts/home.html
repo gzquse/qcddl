@@ -6,83 +6,79 @@
 
     <title>{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" type="text/css" href="{{ "/static/css/bootstrap.min.css" | prepend:site.baseurl }}">
-    <link rel="stylesheet" type="text/css" href="{{ "/static/css/deadlines.css" | prepend:site.baseurl }}" media="screen,projection">
-    <link rel="shortcut icon" href="{{ "/static/img/favicon.png" | prepend:site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/static/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/static/css/deadlines.css" | prepend: site.baseurl }}" media="screen,projection">
+    <link rel="shortcut icon" href="{{ "/static/img/favicon.png" | prepend: site.baseurl }}">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ "/static/js/jquery.countdown.min.js" | prepend:site.baseurl }}"></script>
-    <script src="{{ "/static/js/moment.min.js" | prepend:site.baseurl }}"></script>
-    <script src="{{ "/static/js/moment-timezone-with-data.min.js" | prepend:site.baseurl }}"></script>
-    <script src="{{ "/static/js/store.min.js" | prepend:site.baseurl }}"></script>
-
+    <script type="text/javascript" src="{{ "/static/js/jquery.countdown.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/static/js/moment.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/static/js/moment-timezone-with-data.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/static/js/store.min.js" | prepend: site.baseurl }}"></script>
   </head>
   <body>
     <div class="top-strip"></div>
-    <div class="container">
-      <div class="page-header">
-        <div class="row">
-          <div class="col-xs-12 col-sm-8">
-            <h1>
-              {{ site.title }}<br>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.description }}{% if site.twitter_hashtag %} #{{ site.twitter_hashtag }}{% endif %}" data-show-count="false" style="font-size:13px;">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-              <iframe src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-            </h1>
-          </div>
-          <div class="col-xs-12">
-            {{ site.description }}
-            To add/update a conference, <a target="_blank" href="//github.com/{{ site.github_username }}/{{ site.github_repo }}">send in a pull request</a>.
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-xs-12">
-            <!-- <div class="well"> -->
-              <form class="form-inline">
-                <div class="form-group">
-                  {% for type in site.data.types %}
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" id="{{ type.sub }}-checkbox" class=""> {{ type.name }}
-                    </label>
-                  </div>
-                  {% endfor %}
-                </div>
-              </form>
-            <!-- </div> -->
-          </div>
+    <div class="container mt-4">
+      <div class="page-header text-center">
+        <h1>{{ site.title }}</h1>
+        <p class="lead">{{ site.description }}</p>
+        <div class="social-buttons">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ site.description }}{% if site.twitter_hashtag %} #{{ site.twitter_hashtag }}{% endif %}" data-show-count="false" style="font-size:13px;">Tweet</a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <iframe src="https://ghbtns.com/github-btn.html?user={{ site.github_username }}&repo={{ site.github_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
         </div>
       </div>
+
+      <hr>
+
+      <div class="row mb-4">
+        <div class="col-xs-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="filter">Filter by Type:</label>
+              {% for type in site.data.types %}
+              <div class="form-check">
+                <input type="checkbox" id="{{ type.sub }}-checkbox" class="form-check-input">
+                <label class="form-check-label" for="{{ type.sub }}-checkbox">{{ type.name }}</label>
+              </div>
+              {% endfor %}
+            </div>
+          </form>
+        </div>
+      </div>
+
       <div class="conf-container">
         {% for conf in site.data.conferences %}
-        <div id="{{ conf.name | append: conf.year | slugify }}" class="conf {% for sub in conf.sub %} {{sub}} {% endfor %}">
+        <div id="{{ conf.name | append: conf.year | slugify }}" class="conf {% for sub in conf.sub %} {{ sub }} {% endfor %} mb-4 border rounded p-3">
           <div class="row">
-              <div class="col-xs-12 col-sm-6">
-                <h2><a href="{{conf.link}}">{{conf.name}} {{conf.year}}</a></h2>
-                <div class="meta">
-                  {{ conf.description }}<br>
-                  {{conf.date | replace: '-', '–'}} {% if conf.place %}// <a href="http://maps.google.com/?q={{conf.place}}">{{conf.place}}</a>{% endif %}<br>
-                </div>
+            <div class="col-xs-12 col-sm-6">
+              <h2><a href="{{ conf.link }}">{{ conf.name }} {{ conf.year }}</a></h2>
+              <div class="meta">
+                <p>{{ conf.description }}</p>
+                <p>{{ conf.date | replace: '-', '–' }} {% if conf.place %}// <a href="http://maps.google.com/?q={{ conf.place }}">{{ conf.place }}</a>{% endif %}</p>
               </div>
-              <div class="col-xs-12 col-sm-6">
-                <span class="timer"></span>
-                <div class="deadline">
-                  <div>Deadline:
-                    <span class="deadline-time"></span>
-                    <div class="meta">
-                      {{ conf.comment }}
-                    </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 text-right">
+              <span class="timer h4"></span>
+              <div class="deadline">
+                <div>Deadline:
+                  <span class="deadline-time"></span>
+                  <div class="meta">
+                    {{ conf.comment }}
                   </div>
                 </div>
               </div>
+            </div>
           </div>
           <hr>
         </div>
         {% endfor %}
       </div>
-      <footer>
-        Maintained by @<a href="//twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>.
+
+      <footer class="text-center mt-4">
+        <p>Maintained by @<a href="//twitter.com/{{ site.twitter_username }}">{{ site.twitter_username }}</a>.</p>
       </footer>
     </div>
+
     <script type="text/javascript" charset="utf-8">
     $(function() {
       deadlineByConf = {};
@@ -127,14 +123,13 @@
       var today = moment();
       for (var i = 1; i < parsedDeadlines.length; i++) {
         deadlineCandidate = parsedDeadlines[i];
-          if ((today.diff(deadlineCandidate) < 0 && today.diff(deadlineCandidate) > today.diff(confDeadline))) {
+        if ((today.diff(deadlineCandidate) < 0 && today.diff(deadlineCandidate) > today.diff(confDeadline))) {
           confDeadline = deadlineCandidate;
         }
       }
 
       // render countdown timer
       if (confDeadline) {
-
         $('#{{ conf_id }} .timer').countdown(confDeadline.toDate(), function(event) {
           var today = moment();
           if (today.diff(confDeadline) <= 0) {
@@ -191,7 +186,7 @@
           if (show) {
             conf.show();
           } else {
-            conf.hide()
+            conf.hide();
           }
         });
       }
@@ -219,7 +214,7 @@
     });
 
     <!-- Google analytics -->
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
