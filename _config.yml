@@ -1,14 +1,14 @@
-title: MPC Deadlines Hub
-description: Stay updated with the latest deadlines for top Multi-Party Computation (MPC) events, including conferences, journals, and workshops. Never miss an important submission again!
-author: Ajith Suresh
+title: Quantum Computing Deadlines Hub
+description: Stay updated with the latest deadlines for quantum events, including conferences, journals, and workshops. Never miss an important submission again!
+author: Ziqing Guo
 
-domain: "mpc-deadlines.github.io"
+domain: "qcddl.github.io"
 baseurl: ""
 
-twitter_username: Ajith_Suresh92
-github_username: mpc-deadlines
-github_repo: mpc-deadlines.github.io
-ga_id: G-ZY66C08954
+twitter_username: Martinetin_
+github_username: gzquse
+github_repo: qcddl.github.io
+ga_id: G-8QMW426VWE
 
 markdown: kramdown
 
