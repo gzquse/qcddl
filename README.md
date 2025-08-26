@@ -1,10 +1,6 @@
-# 🚀 MPC Deadlines Hub
+# 🚀 Quantum Computing Deadline
 
-Welcome to the **MPC Deadlines Hub**, your one-stop destination for keeping track of the latest deadlines for top Multi-Party Computation (MPC) conferences, journals, and workshops! 📅✨
-
-## 🤔 What is MPC?
-
-Secure Multi-party Computation (MPC) allows a set of mutually distrusting parties to perform a joint computation over their private inputs while preserving the privacy of their individual inputs. Curious to learn more? Check out this **[MPC overview](https://eprint.iacr.org/2020/300)**! 🔍🔐
+Welcome to the **Quantum Computing Hub**, your one-stop destination for keeping track of the latest deadlines for top qc conferences, journals, and workshops! 📅✨
 
 ## 🚀 Adding/updating a conference
 
@@ -14,8 +10,6 @@ Want to contribute? Awesome! Here’s how:
 * Update `_data/conferences.yml`. You can do this directly on GitHub or locally after forking the repo.
 * Send a pull request. 🎉
 
-💡 **Too lazy to create a pull request?** No worries! Drop a message on our **[Telegram Group](https://t.me/+sm414tMmhGhhNTA0)** 📢, and we’ll update the entries for you! 😎🚀
-
 ### ✅ Is my entry in scope?
 
 This page is meant to host academic conferences, journals, workshops, and related event deadlines.
@@ -23,7 +17,7 @@ This page is meant to host academic conferences, journals, workshops, and relate
 Ask yourself these questions before adding an entry:
 
 - 📝 Is there a "Call For Papers"? A submission link? Formatting guidelines (page limits, style guides, etc.)?
-- 🔐 Does it mention 'secure multi-party computation', 'MPC', or 'privacy-preserving computing' in its topics?
+- 🔐 Does it mention 'quantum information', 'quantum computing', or 'quantum cryptography' in its topics?
 - 🧐 Is there a peer-review process? Are there named general/program chairs or a program committee?
 
 If you answered **YES** to all of the above, congratulations! Your conference/workshop is a great fit! 🎯
@@ -115,9 +109,9 @@ Sometimes, an event is already **confirmed** and has public details like **dates
 
 This helps signal to others that the event is expected, even though submission details are still pending. 🔍
 
-🔥 **Let's make MPC deadlines easy to track—together!** 🚀
+🔥 **Let's make QC deadlines easy to track—together!** 🚀
 
 
 ## 🙏 Acknowledgements
 
-Thanks to the amazing **[sec-deadlines](https://sec-deadlines.github.io)** page, which inspired the initial version of this hub. 🙌
+Thanks to the amazing **[mpc-deadlines](https://mpc-deadlines.github.io/)** page, which inspired the initial version of this hub. 🙌
