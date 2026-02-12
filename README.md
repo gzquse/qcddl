@@ -42,7 +42,17 @@ We use three sets of tags that act as filters to help you quickly find relevant 
 
 For the full list of tags, check out [`/_data/filters.yml`](https://github.com/mpc-deadlines/mpc-deadlines.github.io/blob/main/_data/filters.yml). 🏷️
 
-## 💻 Dev 
+## Automated Updates
+
+A weekly GitHub Actions workflow fetches latest deadlines from IEEE QCE, SC, and [csconfs](https://github.com/dynaroars/csconfs). Run locally:
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/update_deadlines.py --check    # Validate conferences.yml
+python scripts/update_deadlines.py --report   # Fetch and report suggested updates
+```
+
+## Dev 
 ```
 brew install rbenv ruby-build && \
 rbenv install 3.3.0 && \
