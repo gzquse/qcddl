@@ -1,66 +1,256 @@
 ---
-# CORE A*
+# Quantum Computing Deadlines - Conferences, Journals, Workshops
+# Sources: CSRankings, CCF Class A, QCE, SC, npj Quantum Information
+# Timezone: Etc/GMT+12 (AoE) unless noted. See README for tz format.
+
+# === CORE A* (CCF Class A) ===
+
 - name: IEEE FOCS
   description: IEEE Symposium on Foundations of Computer Science
   year: 2026
-  link: https://focs.computer.org/2025/
-  deadline: ["2026-05-04 19:59"]
+  link: https://focs.computer.org/2026/
+  deadline: ["2026-05-04 23:59"]
   date: December 14-17
   place: Sydney, Australia
-  comment: Notification - August 01.
+  comment: Notification - August 01. Quantum computing core theme.
   tags: [THEORY, CNF, COREAS, EXP]
 
-# CORE A
+- name: STOC
+  description: ACM Symposium on Theory of Computing
+  year: 2026
+  link: https://acm-stoc.org/stoc2026/
+  deadline: ["2025-11-04 21:59"]
+  timezone: America/New_York
+  date: June 22-26
+  place: Salt Lake City, UT, USA
+  comment: 4:59 PM EST. Quantum computing core theme.
+  tags: [THEORY, CNF, COREAS]
 
-# CORE B
+- name: SC
+  description: International Conference for High Performance Computing, Networking, Storage, and Analysis
+  year: 2026
+  link: https://sc26.supercomputing.org/
+  deadline: ["2026-04-08 23:59"]
+  date: November 15-20
+  place: Chicago, IL, USA
+  comment: Papers. Abstract Apr 1. Quantum Computing Technical Area. No extensions.
+  tags: [APPLIED, CNF, COREAS, HW]
+
+- name: ISCA
+  description: ACM/IEEE International Symposium on Computer Architecture
+  year: 2026
+  link: https://www.iscaconf.org/isca2026/
+  abdeadline: November 10, 2025
+  deadline: ["2025-11-17 23:59"]
+  date: June 27 - July 1
+  place: TBA
+  comment: Quantum computer architecture topic. Industry track Dec 12.
+  tags: [HW, CNF, COREAS]
+
+- name: MICRO
+  description: IEEE/ACM International Symposium on Microarchitecture
+  year: 2026
+  link: https://www.microarch.org/micro59/
+  abdeadline: March 31, 2026
+  deadline: ["2026-04-07 23:59"]
+  timezone: America/New_York
+  date: October 31 - November 4
+  place: Athens, Greece
+  comment: Dedicated Quantum session. Rebuttal Jun 3-17.
+  tags: [HW, CNF, COREAS]
+
+- name: DAC
+  description: Design Automation Conference - Quantum EDA Track DES6
+  year: 2026
+  link: https://dac.com/2026/
+  abdeadline: November 11, 2025
+  deadline: ["2025-11-19 05:00"]
+  timezone: America/Los_Angeles
+  date: July 26-29
+  place: Long Beach, CA, USA
+  comment: Quantum computing applications, hardware, EDA. 5 PM PST.
+  tags: [HW, CNF, COREAS]
+
+- name: ICML
+  description: International Conference on Machine Learning - QML
+  year: 2026
+  link: https://icml.cc/Conferences/2026
+  abdeadline: January 23, 2026
+  deadline: ["2026-01-28 23:59"]
+  date: July 6-11
+  place: Seoul, South Korea
+  comment: QML position papers and theory.
+  tags: [PPML, CNF, COREAS]
+
+- name: NeurIPS
+  description: Neural Information Processing Systems - QML
+  year: 2026
+  link: https://neurips.cc/Conferences/2026
+  deadline: ["TBA"]
+  date: TBA
+  place: TBA
+  comment: QML theory. Check website for dates.
+  tags: [PPML, CNF, COREAS, EXP]
+
+# === CORE A ===
+
+- name: HPCA
+  description: International Symposium on High-Performance Computer Architecture
+  year: 2026
+  link: https://hpca-conf.org/2026/
+  deadline: ["TBA"]
+  date: TBA
+  place: TBA
+  comment: Quantum Computing Session. CFP typically Jul-Aug.
+  tags: [HW, CNF, COREA, EXPCFP]
+
+- name: PLDI
+  description: ACM SIGPLAN Conference on Programming Language Design and Implementation
+  year: 2026
+  link: https://pldi26.sigplan.org/
+  deadline: ["2025-11-13 23:59"]
+  date: June 15-19
+  place: Boulder, CO, USA
+  comment: WQS Workshop. Quantum compiler optimization.
+  tags: [PRACT, CNF, COREA]
+
+- name: POPL
+  description: ACM SIGPLAN Symposium on Principles of Programming Languages
+  year: 2026
+  link: https://popl26.sigplan.org/
+  deadline: ["2025-07-10 23:59"]
+  date: January 11-17
+  place: Rennes, France
+  comment: PLANQC workshop. Quantum 3.0, type systems.
+  tags: [THEORY, CNF, COREA]
+
+- name: ASPLOS
+  description: Architectural Support for Programming Languages and Operating Systems
+  year: 2026
+  link: https://asplos-conference.org/
+  deadline: ["TBA"]
+  date: March 2026
+  place: Pittsburgh, PA, USA
+  comment: Quantum OS, cross-layer. HAIQ workshop co-located.
+  tags: [PRACT, CNF, COREA, EXPCFP]
+
+# === Quantum-Specific Conferences ===
+
+- name: IEEE QCE
+  description: IEEE Quantum Week - Premier quantum computing conference
+  year: 2026
+  link: https://qce.quantum.ieee.org/2026/
+  abdeadline: April 6, 2026
+  deadline: ["2026-04-13 23:59"]
+  date: September 13-18
+  place: Toronto, Ontario, Canada
+  comment: Technical papers. Workshops Mar 23. Posters Jun 1/29.
+  tags: [PRACT, APPLIED, CNF, HW]
+
+- name: IEEE QCE
+  description: IEEE Quantum Week - Premier quantum computing conference
+  year: 2025
+  link: https://qce.quantum.ieee.org/2025/
+  deadline: ["2025-04-14 23:59"]
+  date: September 7-12
+  place: Washington, D.C., USA
+  comment: Technical papers. Past deadlines for reference.
+  tags: [PRACT, APPLIED, CNF, HW]
+
+# === AI Conferences with QC/QML Tracks ===
+
+- name: AAAI
+  description: AAAI Conference on Artificial Intelligence - QIML Symposium
+  year: 2026
+  link: https://aaai.org/conference/aaai/aaai-26/
+  abdeadline: July 25, 2025
+  deadline: ["2025-08-01 23:59"]
+  date: January 20-22
+  place: Singapore
+  comment: AAAI Symposium on Quantum Information and ML.
+  tags: [PPML, CNF, COREAS]
+
+- name: IJCAI
+  description: International Joint Conference on Artificial Intelligence
+  year: 2026
+  link: https://2026.ijcai.org/
+  abdeadline: January 12, 2026
+  deadline: ["2026-01-19 23:59"]
+  rebut: April 7, 2026
+  date: August 15
+  place: Bremen, Germany
+  comment: Phase 1. QML, parameterized quantum circuits.
+  tags: [PPML, CNF, COREAS]
+
+# === CORE B / Other ===
+
 - name: ACM ICPP
   description: ACM International Conference on Parallel Processing
   year: 2025
   link: https://icpp2025.sdsc.edu/
-  deadline: ["2025-04-21 19:59"]
+  deadline: ["2025-04-21 23:59"]
   date: September 8-11
   place: San Diego, CA, USA
   comment: Notification - June 10th.
   tags: [APPLIED, CNF, COREB, EXP]
-# CORE Others
 
-# Workshops
+# === Workshops ===
+
+- name: HAIQ
+  description: HPC/AI Integration with Quantum Computing Workshop
+  year: 2026
+  link: https://haiq-workshop.org/
+  deadline: ["TBA"]
+  date: March 2026
+  place: Pittsburgh, PA, USA
+  conference: ASPLOS 2026
+  comment: Co-located with ASPLOS. Submit at submit.haiq-workshop.org
+  tags: [PRACT, WK, HW]
 
 - name: Monterey Data Conference
-  description: Monterey Data Conference 2025
+  description: Monterey Data Conference
   year: 2025
   link: https://www.montereydataconference.org/
   deadline: ["2025-08-01 23:59"]
   date: Aug 18-21
   place: Monterey, CA, USA
-  comment: Fun fact - they offer food in aquarium
+  comment: Data and quantum-adjacent topics.
   tags: [PRACT, WK]
-  
-# Posters
-  
-# Machine Learning and Data Science
 
-- name: AAAI
-  description: Symposium on Artificial Intelligence
-  year: 2025
-  link: https://aaai-qiml.github.io/
-  abdeadline: July 25
-  deadline: ["2025-08-01 23:59"]
-  date: November 6-8
-  place: Arlington, VA, USA
-  comment: Camera Ready Deadline Sep 2nd
-  tags: [PRACT, CNF, PPML, COREAS]
+# === Journals (SCI-1 / Nature / Top QC) ===
 
-  
-# Miscellaneous
-  
-# Journals
+- name: npj Quantum Information
+  description: Nature Partner Journal - Quantum Information
+  year: 2026
+  link: https://www.nature.com/npjqi/
+  deadline: ["2026-09-22 23:59", "2026-06-25 23:59", "2026-05-04 23:59"]
+  portal: https://mts-npjqi.nature.com/
+  comment: Special issues - Quantum Networks (Sep 22), Fault Tolerance (Jun 25), Quantum Bioimaging (May 4). Rolling submission.
+  tags: [PRACT, JRN, APPLIED]
 
-- name: ACM ToQC
-  description: IEEE Transactions on Quantum Computing
-  year: 2025
-  link: https://dl.acm.org/pb-assets/static_journal_pages/tqc/pdf/TQC-SI-CfP_HPC-AI-Technologies-Integrations-Quantum-Computing-1743104951303.pdf
-  deadline: ["%y-10-30 23:59"]
+- name: ACM TQC
+  description: ACM Transactions on Quantum Computing
+  year: 2026
+  link: https://dl.acm.org/journal/tqc
+  deadline: ["2026-10-30 23:59"]
   portal: https://mc.manuscriptcentral.com/tqc
-  comment: Accepts submission throughout the year.
-  tags: [PRACT, APPLIED, JRN]
+  comment: Special issues. Rolling submission for general submissions.
+  tags: [PRACT, JRN, APPLIED]
+
+- name: Nature Computational Science
+  description: Nature Computational Science - Computational research
+  year: 2025
+  link: https://www.nature.com/natcomputsci/
+  deadline: ["TBA"]
+  portal: https://mts-natcomputsci.nature.com/
+  comment: Rolling submission. Covers quantum computing. IF 18.3.
+  tags: [PRACT, JRN]
+
+- name: Nature Physics
+  description: Nature Physics - Quantum mechanics and physics
+  year: 2025
+  link: https://www.nature.com/nphys/
+  deadline: ["TBA"]
+  portal: https://mts-nphys.nature.com/
+  comment: Rolling submission. Quantum physics. IF 18.4.
+  tags: [THEORY, JRN]

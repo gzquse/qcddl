@@ -1,0 +1,42 @@
+# Scheduler: Pull latest quantum computing conference/journal deadlines
+# Runs weekly and on manual trigger. Outputs report for manual review.
+
+name: Update Deadlines
+
+on:
+  schedule:
+    # Run every Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '_data/conferences.yml'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Validate conferences
+        run: python scripts/update_deadlines.py --check
+
+      - name: Fetch deadline report
+        run: python scripts/update_deadlines.py --report 2>&1 | tee deadline-report.txt || true
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: deadline-report
+          path: deadline-report.txt
