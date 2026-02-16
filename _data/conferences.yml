@@ -254,3 +254,88 @@
   portal: https://mts-nphys.nature.com/
   comment: Rolling submission. Quantum physics. IF 18.4.
   tags: [THEORY, JRN]
+
+# === Physical Review Series (APS) ===
+
+- name: Physical Review Letters
+  description: Physical Review Letters - Brief reports of important results
+  year: 2026
+  link: https://journals.aps.org/prl/
+  deadline: ["TBA"]
+  portal: https://authors.aps.org/Submissions/
+  comment: Rolling submission. Letters 3750 words. Simultaneous submission to PRA/PRX.
+  tags: [THEORY, JRN]
+
+- name: Physical Review A
+  description: Physical Review A - Atomic, molecular, optical, quantum science
+  year: 2026
+  link: https://journals.aps.org/pra/
+  deadline: ["TBA"]
+  portal: https://authors.aps.org/Submissions/
+  comment: Rolling submission. Quantum info, quantum computing. Letters 4500 words.
+  tags: [THEORY, JRN]
+
+- name: Physical Review X
+  description: Physical Review X - Open access, broad scope
+  year: 2026
+  link: https://journals.aps.org/prx/
+  deadline: ["TBA"]
+  portal: https://authors.aps.org/Submissions/
+  comment: Rolling submission. High-impact, open access.
+  tags: [THEORY, JRN]
+
+- name: Physical Review Research
+  description: Physical Review Research - Multidisciplinary open access
+  year: 2026
+  link: https://journals.aps.org/prresearch/
+  deadline: ["TBA"]
+  portal: https://authors.aps.org/Submissions/
+  comment: Rolling submission. Quantum computing, interdisciplinary.
+  tags: [THEORY, JRN, PRACT]
+
+- name: Physical Review Applied
+  description: Physical Review Applied - Applied physics and devices
+  year: 2026
+  link: https://journals.aps.org/prapplied/
+  deadline: ["TBA"]
+  portal: https://authors.aps.org/Submissions/
+  comment: Rolling submission. Quantum devices, implementations.
+  tags: [PRACT, JRN, HW]
+
+# === Nature and Science ===
+
+- name: Nature
+  description: Nature - Multidisciplinary science
+  year: 2026
+  link: https://www.nature.com/nature/
+  deadline: ["TBA"]
+  portal: https://mts-nature.nature.com/
+  comment: Rolling submission. Quantum computing, fundamental advances.
+  tags: [THEORY, JRN]
+
+- name: Nature Communications
+  description: Nature Communications - Open access, multidisciplinary
+  year: 2026
+  link: https://www.nature.com/ncomms/
+  deadline: ["TBA"]
+  portal: https://mts-ncomms.nature.com/
+  comment: Rolling submission. Open access. Covers quantum research.
+  tags: [PRACT, JRN]
+
+- name: Science
+  description: Science - AAAS multidisciplinary journal
+  year: 2026
+  link: https://www.science.org/journal/science
+  deadline: ["TBA"]
+  portal: https://cts.sciencemag.org/
+  comment: Rolling submission. Quantum computing, fundamental science.
+  tags: [THEORY, JRN]
+
+- name: Science Advances
+  description: Science Advances - AAAS open access
+  year: 2026
+  link: https://www.science.org/journal/sciadv
+  deadline: ["TBA"]
+  portal: https://cts.sciencemag.org/
+  comment: Rolling submission. Open access. Quantum research.
+  tags: [PRACT, JRN]
