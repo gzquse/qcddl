@@ -339,3 +339,12 @@
   portal: https://cts.sciencemag.org/
   comment: Rolling submission. Open access. Quantum research.
   tags: [PRACT, JRN]
+
+- name: PNAS
+  description: Proceedings of the National Academy of Sciences
+  year: 2026
+  link: https://www.pnas.org/
+  deadline: ["TBA"]
+  portal: https://www.pnas.org/author-center/submitting-your-manuscript
+  comment: Rolling submission. Multidisciplinary; quantum and physical sciences.
+  tags: [THEORY, JRN, APPLIED]
